@@ -12,7 +12,6 @@ public abstract class Characters : MonoBehaviour
 
     protected virtual void Start()
     {
-        
         damage = GetComponent<Weapon>().GetDamage();
     }
 
