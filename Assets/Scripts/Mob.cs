@@ -5,13 +5,14 @@ using UnityEngine;
 public class Mob : Characters
 {
     private GameObject player;
+    [SerializeField]
+    private float offsetX, rangeDetection;
 
     protected override void Start()
     {
         base.Start();
         player = GameObject.FindGameObjectWithTag("Player");
     }
-
 
     void Update()
     {
@@ -27,8 +28,13 @@ public class Mob : Characters
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            Attack(weapon, player);
+            
         }
+    }
+
+    private void Chase()
+    {
+
     }
 
     //private void Hit(float damage)

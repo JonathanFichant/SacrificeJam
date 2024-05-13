@@ -13,16 +13,13 @@ public class FollowPlayer : MonoBehaviour
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
-
     }
 
     void Update()
     {
-        Vector3 tempPosition = Vector3.Lerp(transform.position, player.transform.position + new Vector3(0,offsetY,0), speed * Time.deltaTime); ;
+        Vector3 tempPosition = Vector3.Lerp(transform.position, player.transform.position + new Vector3(0, offsetY, 0), speed * Time.deltaTime); ;
         tempPosition.z = -10f;
         transform.position = tempPosition;
 
     }
-
-   
 }
